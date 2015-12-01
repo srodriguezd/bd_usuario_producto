@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    {{ parent() }}
+
+    <ul>
+        <li><a href="{{ path('app_producto_insert') }}">Añadir Producto</a></li>
+
+    </ul>
+    <table>
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Descripcion</th>
+            <th>Precio</th>
+            <th>Disponibilidad</th>
+            <th>Creado</th>
+            <th>Actualizado</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for producto in productos  %}
+            <tr>
+                <td>{{ producto.id }}</td>
+                <td>{{ producto.nombre }}</td>
+                <td>{{ producto.descripcion }}</td>
+                <td>{{ producto.precio }}</td>
+                <td>{{ producto.disponibilidad }}</td>
+                <td>{{ producto.createdAt|date('d/m/Y') }}</td>
+                <td>{{ producto.updatedAt|date('d/m/Y') }}</td>
+                <td><a href="{{ path('app_producto_update') }}">Editar</a></td>
+                <td><a href="{{ path('app_producto_delete') }}">Borrar</a></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
+
+
+{% block stylesheets %}
+    <style>
+        div{
+            font-size: 20px;
+            color: black;
+            margin-left: 15px;
+
+        }
+        td{
+           text-align: center;
+        }
+    </style>
+{% endblock %}

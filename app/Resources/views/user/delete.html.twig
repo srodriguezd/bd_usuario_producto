@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    {{ parent() }}
+    <div>
+        <form id ="fr" method="post" action="{{ path('app_user_doDelete') }}">
+            <p>Nombre de usuario</p>
+            <input type="text" name="user"><br/><br/>
+
+            <input type="submit" value="delete"><br/>
+        </form>
+
+    </div>
+
+{% endblock %}
+
+
+
+
+{% block stylesheets %}
+    <style>
+        div{
+            font-size: 20px;
+            color: black;
+            margin-left: 15px;
+        }
+    </style>
+{% endblock %}

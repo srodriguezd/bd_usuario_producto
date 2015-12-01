@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+
+
+    <ul>
+        <li><a href="{{ path('app_producto_insert') }}">Crear Producto</a></li>
+        <li><a href="{{ path('app_producto_mostrar') }}">Ver Productos</a></li>
+    </ul>
+
+
+{% endblock %}
+
+{% block stylesheets %}
+    <style>
+        div{
+            font-size: 20px;
+            color: black;
+            margin-left: 15px;
+        }
+    </style>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    {{ parent() }}
+    <div>
+
+        <span>El usuario {{ user }} se ha añadido correctamente</span>
+        <ul><li><a href="{{ path('mostrar') }}">Siguiente</a></li></ul>
+    </div>
+
+{% endblock %}
+
+
+
+
+
+{% block stylesheets %}
+    <style>
+        div{
+            font-size: 20px;
+            color: black;
+            margin-left: 15px;
+        }
+    </style>
+{% endblock %}

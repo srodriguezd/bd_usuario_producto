@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+
+
+
+    <ul>
+        <li><a href="{{ path('app_user_insert') }}">Crear usuario</a></li>
+        <li><a href="{{ path('mostrar') }}">Ver Usuarios</a></li>
+    </ul>
+
+
+{% endblock %}
+
+
+
+{% block stylesheets %}
+    <style>
+        div{
+            font-size: 20px;
+            color: black;
+            margin-left: 15px;
+        }
+    </style>
+{% endblock %}

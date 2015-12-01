@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    {{ parent() }}
+    <div>
+        <form id ="fr" method="post" action="{{ path('app_producto_doUpdate') }}">
+            <p>Nombre de producto</p>
+            <input type="text" name="nombre"><br/><br/>
+            <p>Descripcion</p>
+            <input type="text area" name="descripcion"><br/><br/><br/>
+            <p>Precio</p>
+            <input type="text" name="precio"><br/><br/>
+            <p>Disponibilidad</p>
+            <input type="text" name="disponibilidad"><br/><br/>
+
+            <input type="submit" value="añadir"><br/>
+        </form>
+
+    </div>
+
+{% endblock %}
+
+
+
+
+{% block stylesheets %}
+    <style>
+        div{
+            font-size: 20px;
+            color: black;
+            margin-left: 15px;
+        }
+    </style>
+{% endblock %}

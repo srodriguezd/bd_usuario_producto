@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    {{ parent() }}
+    <div>
+
+        <span style="font-size:25px">El Producto {{ producto }} se ha modificado correctamente</span>
+        <ul><li><a href="{{ path('producto') }}">Index</a></li></ul>
+    </div>
+
+{% endblock %}
+
+
+
+{% block stylesheets %}
+    <style>
+        div{
+            font-size: 20px;
+            color: black;
+            margin-left: 15px;
+        }
+    </style>
+{% endblock %}
